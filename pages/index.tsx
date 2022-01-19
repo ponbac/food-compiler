@@ -8,7 +8,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 dark:bg-slate-800 dark:text-white">
       <ThemeToggleButton />
 
       <Head>
@@ -26,7 +26,7 @@ export default function Home() {
         </p>
 
         <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <div className="flex border-2 rounded">
+          <div className="flex border-2 rounded bg-white text-black">
             <button className="flex items-center justify-center px-4 border-r">
               <svg
                 className="w-6 h-6 text-gray-600"
@@ -39,7 +39,7 @@ export default function Home() {
             </button>
             <input
               type="text"
-              className="px-4 py-2 w-80"
+              className="px-4 py-2 w-80 outline-none"
               placeholder={searchPlaceholder()}
             />
           </div>
