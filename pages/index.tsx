@@ -14,17 +14,23 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 dark:bg-slate-800 dark:text-white">
-      <ThemeToggleButton />
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100 dark:bg-slate-800 dark:text-white">
+      <div className="">
+        <ThemeToggleButton />
+      </div>
 
       <Head>
-        <title>Create Next App</title>
+        <title>[hungrig]</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <h1 className="text-6xl font-bold">
-          Är du <span className="text-red-700">hungrig?</span>
+          Är du{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600">
+            [hungrig]
+          </span>
+          ?
         </h1>
 
         <p className="mt-3 text-2xl italic">
