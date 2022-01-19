@@ -2,8 +2,14 @@ import Head from "next/head";
 import ThemeToggleButton from "../components/theme-toggle-button";
 
 export default function Home() {
-  const searchPlaceholder = () : string => {
-    const exampleFood = ["Råbiff", "Vitlökspizza", "Pad Thai", "Tryffelpasta", "Sushi"];
+  const searchPlaceholder = (): string => {
+    const exampleFood = [
+      "Råbiff",
+      "Vitlökspizza",
+      "Pad Thai",
+      "Tryffelpasta",
+      "Sushi",
+    ];
     return exampleFood[Math.floor(Math.random() * exampleFood.length)];
   };
 
