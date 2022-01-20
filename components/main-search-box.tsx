@@ -18,8 +18,8 @@ const MainSearchBox = () => {
   };
 
   return (
-    <div className="flex border-2 rounded bg-white text-black">
-      <button className="flex items-center justify-center px-4 border-r">
+    <div className="flex border-2 border-gray-300 rounded bg-white text-black">
+      <button className="flex items-center justify-center px-4 border-r border-gray-300">
         <svg
           className="w-6 h-6 text-gray-600"
           fill="currentColor"
