@@ -10,6 +10,7 @@ const MainSearchBox = () => {
     return exampleFood[Math.floor(Math.random() * exampleFood.length)];
   };
 
+  // https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/react/#using-widgets
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     if (value.length > 2) {

@@ -3,7 +3,7 @@ import { SunIcon, MoonIcon } from "@chakra-ui/icons"; // TODO: Remove this impor
 import { useEffect, useState } from "react";
 
 const ThemeToggleButton = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState<boolean>(false);
 
   useEffect(() => {
     let storedValue = window.localStorage.getItem("darkMode");
