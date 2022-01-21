@@ -29,7 +29,7 @@ const AlgoliaSearch = () => {
   const searchClient = {
     ...algoliaClient,
     search(requests: any[]) {
-      if (requests.every(({ params }) => !params.query) && false) {
+      if (requests.every(({ params }) => !params.query) && true) {
         // Remove false when done designing hits
         return Promise.resolve({
           results: requests.map(() => ({
@@ -54,12 +54,13 @@ const AlgoliaSearch = () => {
           <div className="mt-3">
             <Hits
               hitComponent={({ hit }) => {
-                console.log(hit);
+                //console.log(hit);
                 return (
                   <CustomHit
                     title={hit.title}
                     ingredients={hit.ingredients as unknown as string[]}
                     restaurant={hit.restaurant}
+                    price={hit.price}
                   />
                 );
               }}
