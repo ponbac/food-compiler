@@ -1,5 +1,5 @@
 import Head from "next/head";
-import MainSearchBox from "../components/main-search-box";
+import AlgoliaSearch from "../components/algolia/algolia-search";
 import ThemeToggleButton from "../components/theme-toggle-button";
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
         </p>
 
         <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <MainSearchBox />
+          <AlgoliaSearch />
         </div>
       </main>
 

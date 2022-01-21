@@ -1,4 +1,19 @@
-const MainSearchBox = () => {
+import { FC, useState } from "react";
+import { connectSearchBox } from "react-instantsearch-dom";
+
+interface SearchBoxProps {
+  currentRefinement: string;
+  refine: (value: string) => void;
+  isSearchStalled: boolean;
+}
+
+const SearchBox: FC<SearchBoxProps> = ({
+  currentRefinement,
+  isSearchStalled,
+  refine,
+}) => {
+  const [searchValue, setSearchValue] = useState<string>("");
+
   const searchPlaceholder = (): string => {
     const exampleFood = [
       "Råbiff",
@@ -8,14 +23,6 @@ const MainSearchBox = () => {
       "Sushi",
     ];
     return exampleFood[Math.floor(Math.random() * exampleFood.length)];
-  };
-
-  // https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/react/#using-widgets
-  const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = e.target;
-    if (value.length > 2) {
-      console.log(value);
-    }
   };
 
   return (
@@ -33,11 +40,20 @@ const MainSearchBox = () => {
       <input
         type="text"
         className="px-4 py-2 w-80 outline-none"
+        value={searchValue}
+        onChange={(event) => {
+          if (event.target.value.length < searchValue.length) {
+            refine(event.currentTarget.value);
+          } else if (event.target.value.length > 0) { // TODO: Should there be a limit? Debouncing instead?
+            refine(event.currentTarget.value);
+          }
+          setSearchValue(event.target.value);
+        }}
         placeholder={searchPlaceholder()}
-        onChange={inputHandler}
       />
     </div>
   );
 };
 
-export default MainSearchBox;
+const CustomSearchBox = connectSearchBox(SearchBox);
+export default CustomSearchBox;
