@@ -58,6 +58,7 @@ const AlgoliaSearch = () => {
                 return (
                   <CustomHit
                     title={hit.title}
+                    description={hit.description}
                     ingredients={hit.ingredients as unknown as string[]}
                     restaurant={hit.restaurant}
                     price={hit.price}
