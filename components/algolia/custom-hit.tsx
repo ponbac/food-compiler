@@ -16,7 +16,7 @@ const CustomHit: FC<HitProps> = ({ title, ingredients, restaurant, price }) => {
       </h2>
       <div className="">
         <p className="text-gray-700 px-1 flex">
-          <span className="text-left w-1/2 italic">
+          <span className="text-left w-3/5 italic truncate">
             {ingredients.map((i) => {
               return (
                 <span key={i} className="">
@@ -24,8 +24,8 @@ const CustomHit: FC<HitProps> = ({ title, ingredients, restaurant, price }) => {
                 </span>
               );
             })}
-          </span>{" "}
-          <span className="text-right w-1/2 font-bold">{restaurant}</span>
+          </span>
+          <span className="text-right w-2/5 font-bold">{restaurant}</span>
         </p>
       </div>
     </div>
