@@ -39,7 +39,7 @@ const SearchBox: FC<SearchBoxProps> = ({
       </button>
       <input
         type="text"
-        className="px-4 py-2 w-80 outline-none"
+        className="px-4 py-2 w-full outline-none"
         value={searchValue}
         onChange={(event) => {
           if (event.target.value.length < searchValue.length) {

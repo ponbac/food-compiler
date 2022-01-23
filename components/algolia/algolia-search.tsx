@@ -47,9 +47,9 @@ const AlgoliaSearch = () => {
   };
 
   return (
-    <div className="lg:w-1/2">
+    <div className="">
       <InstantSearch searchClient={searchClient} indexName="courses">
-        <div className="right-panel">
+        <div className="">
           <CustomSearchBox />
           <div className="mt-3">
             <Hits

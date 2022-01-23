@@ -27,7 +27,7 @@ export default function Home() {
           Sök efter maträtten du är sugen på nedan.
         </p>
 
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
+        <div className="items-center justify-around max-w-lg mt-6 w-full">
           <AlgoliaSearch />
         </div>
       </main>
