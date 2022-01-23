@@ -43,9 +43,9 @@ const SearchBox: FC<SearchBoxProps> = ({
         value={searchValue}
         onChange={(event) => {
           if (event.target.value.length < searchValue.length) {
-            refine(event.currentTarget.value);
+            refine(event.currentTarget.value.toUpperCase());
           } else if (event.target.value.length > 0) { // TODO: Should there be a limit? Debouncing instead?
-            refine(event.currentTarget.value);
+            refine(event.currentTarget.value.toUpperCase());
           }
           setSearchValue(event.target.value);
         }}
