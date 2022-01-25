@@ -62,6 +62,8 @@ const AlgoliaSearch = () => {
                     ingredients={hit.ingredients as unknown as string[]}
                     restaurant={hit.restaurant}
                     price={hit.price}
+                    restaurantURL={hit.url}
+                    foodoraURL={hit.foodora_url}
                   />
                 );
               }}
