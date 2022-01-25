@@ -24,7 +24,7 @@ const CustomHit: FC<HitProps> = ({
       <a href={foodoraURL} target="_blank">
         <h2 className="text-xl font-bold text-gray-800 text-left px-1 flex">
           <span className="text-left w-4/5">{title}</span>
-          <span className="text-right w-1/5">{price} kr</span>
+          <span className="text-right w-1/5">{price == "0" ? "?" : price} kr</span>
         </h2>
         <div className="">
           <p className="text-gray-700 px-1 flex">
