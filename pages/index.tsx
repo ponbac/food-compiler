@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+      <main className="mt-3 flex flex-col items-center justify-center w-full flex-1 px-3 md:px-20 text-center">
         <h1 className="text-6xl font-bold">
           Är du{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600">
@@ -24,7 +24,7 @@ export default function Home() {
         </h1>
 
         <p className="mt-3 text-2xl italic">
-          Sök efter maträtten du är sugen på nedan.
+          Sök efter det du är sugen på nedan.
         </p>
 
         <div className="items-center justify-around max-w-lg mt-6 w-full">
